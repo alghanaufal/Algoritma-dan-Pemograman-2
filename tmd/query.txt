@@ -1,0 +1,68 @@
+FORMAT INPUT
+- INSERT (UPDATE/DELETE) tabel key input1 input2 input3
+- UPDATE (DELETE) tabel key input1 input2 input3
+- DELETE tabel key
+- SELECT tabel1 (tabel2)
+
+CORRECT TEST CASE
+- INSERT thp H003 ASUS 5Pro S001;
+- INSERT tspek S003 Bionic_12 Bionic 4/3/2017;
+- INSERT tcam S003 8MP 16MP 1TERA;
+
+- INSERT UPDATE thp H004 Samsung S22 S004;
+- INSERT UPDATE thp H001 Xiaomi NOTE S001;
+
+- INSERT UPDATE tspek S004 Snapdragon_8gen1 Adreno_856 4/1/2005;
+- INSERT UPDATE tspek S001 Mediatek_Helio Mali_ati_78 6/12/2018;
+
+- INSERT UPDATE tcam S004 56MP 100MP 126GB;
+- INSERT UPDATE tcam S001 56MP 100MP 126GB;
+
+- INSERT DELETE thp H004 Samsung S22 S004;
+- INSERT DELETE tspek S004 Snapdragon_8gen1 Adreno_856 4/1/2005;
+- INSERT DELETE tcam S004 56MP 100MP 126GB;
+
+- UPDATE thp H003 Iphone 13 S003;
+- UPDATE tspek S003 Bionic_12 Bionic 4/3/2017;
+- UPDATE tcam S003 8MP 16MP 1TERA;
+
+- UPDATE DELETE thp H002 Xiaomi Redmi_8 S002;
+- UPDATE DELETE tspek S002 Mediatek_8000 Mali_ati_78 4/2/2020;
+- UPDATE DELETE tcam S002 8MP 16MP 256GB;
+
+- DELETE thp H001;
+- DELETE tspek S001;
+- DELETE tcam S001;
+
+- SELECT thp;
+- SELECT tspek;
+- SELECT tcam;
+
+- SELECT thp tspek;
+- SELECT thp tcam;
+- SELECT thp tspek tcam;
+- SELECT thp tcam tspek; 
+
+query salah
+
+- UPDATE INSERT DELETE SELECT thp H001 Xiaomi Redmi_8 S001; 
+- INSERT tspek B001 Mediatek Helio Adreno 666 R001;
+- INSEERT thp H001 Xiaomi Redmi_8 S001;
+- INSERT tsepek B001 Mediatek_Helio Adreno_666 R001;
+- DELETE thp  H010 Vivo 7 S001;
+- SELECT thp tsepek;
+
+thp
+H001 Samsung J2 S001
+H002 vivo 78 S002
+#### #### #### ####
+
+tspek
+S001 Exynos_1000 Adreno_444 6/6/2010
+S002 Mediatek_8000 Adreno_656 6/6/2019
+#### #### #### ####
+
+tcam
+S001 6MP 12MP 16GB
+S002 16MP 48MP 64GB
+#### #### #### ####
